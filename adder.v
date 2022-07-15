@@ -4,6 +4,8 @@ module full_adder( A, B, Cin, S, Cout);
 input wire A, B, Cin;
 output reg S, Cout;
 
+// fofofo
+
 always @(A or B or Cin)
 begin
  if(A==0 && B==0 && Cin==0)
