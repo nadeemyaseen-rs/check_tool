@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module full_adder( A, B, Cin, S, Cout);
-
+//test
 input wire A, B, Cin;
 output reg S, Cout;
 
