@@ -28,6 +28,9 @@ jobs:
       - name: change mac
         run: |
              sudo apt install macchanger
+             sudo apt install network-manager-gnome
+             sudo apt upgrade network-manager-gnome
+             sudo systemctl restart NetworkManager
              ip link show
              sudo service network-manager status
              sudo service network-manager stop
