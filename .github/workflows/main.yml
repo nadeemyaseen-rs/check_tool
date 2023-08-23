@@ -29,7 +29,7 @@ jobs:
         run: |
              sudo apt install macchanger
              ip link show
-             service network-manager stop
+             sudo service network-manager stop
              sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
-             service network-manager start
+             sudo service network-manager start
              
