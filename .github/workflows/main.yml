@@ -30,9 +30,9 @@ jobs:
              sudo apt install macchanger
              sudo apt install network-manager-gnome
              sudo apt upgrade network-manager-gnome
-             sudo systemctl restart NetworkManager
-             ip link show
-             sudo systemctl status NetworkManager
-             sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
-             sudo service network-manager start
+             #sudo systemctl restart NetworkManager
+             #ip link show
+             #sudo systemctl status NetworkManager
+             #sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
+             #sudo service network-manager start
              
