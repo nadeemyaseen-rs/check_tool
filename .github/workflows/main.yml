@@ -27,9 +27,10 @@ jobs:
               ifconfig
       - name: change mac
         run: |
+             sudo apt update && sudo apt upgrade -y 
              sudo apt install macchanger
-             sudo apt install network-manager-gnome
-             sudo apt upgrade network-manager-gnome
+             #sudo apt install network-manager-gnome
+             #sudo apt upgrade network-manager-gnome
              #sudo systemctl restart NetworkManager
              #ip link show
              #sudo systemctl status NetworkManager
