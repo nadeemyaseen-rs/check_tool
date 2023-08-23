@@ -25,3 +25,9 @@ jobs:
         run: |
               sudo apt install net-tools
               ifconfig
+      - name: change mac
+        run: |
+             sudo apt install macchanger
+             ip link show
+             sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
+             
