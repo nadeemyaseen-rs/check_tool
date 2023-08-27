@@ -25,15 +25,24 @@ jobs:
         run: |
               sudo apt install net-tools
               ifconfig
-      - name: change mac
+              
+      - name: update
         run: |
              sudo apt update && sudo apt upgrade -y 
-             sudo apt install macchanger
-             sudo apt install network-manager-gnome
+             
+      - name: install network manager
+        run: |
+             sudo apt install -y macchanger network-manager-gnome
+             
+      - name: use network manager
+        run: |
              sudo systemctl status NetworkManager
              sudo systemctl restart NetworkManager
+             
+      - name: change mac
+        run: |
              sudo systemctl stop NetworkManager
-             #ip link show
-             #sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
-             #sudo service network-manager start
+             ip link show
+             sudo macchanger --mac=78:2B:CB:47:2F:5A eth0
+             sudo systemctl start NetworkManager
              
